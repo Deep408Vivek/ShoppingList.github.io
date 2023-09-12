@@ -1,0 +1,93 @@
+body{
+    background-color: rgb(18, 18, 143);
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    /* background-color: rgb(62, 15, 107); */
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+.box{
+    margin-left: 380px;
+}
+.shopPhoto{
+    margin-left: -860px;
+    margin-bottom: -500px;
+    transform: rotate(-0.5deg);
+}
+.list{
+    margin-top: -363px;
+    margin-left: 340px;
+    
+}
+form {
+  border: solid brown 2px;
+  width: 250px;
+  padding: 20px;
+  height: 320px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+form h2{
+    font-size: 30px;
+    -webkit-text-fill-color: rgba(207, 122, 18, 0.95);
+}
+input{
+    border: none;
+    outline: none;
+    border: 1.5px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    color: white;
+}
+form p{
+    color: crimson;
+}
+.list p{
+    color: lime;
+}
+.list li{
+    color: mediumspringgreen;
+}
+form ::placeholder{
+    color: rgb(121, 117, 117);
+}
+.btn1{
+    border: none;
+    height: 30px;
+    width: 90px;
+    border-radius: 4px;
+    background-color: aqua;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: -160px;
+}
+.btn2{
+    border: none;
+    height: 16px;
+    width: 50px;
+    border-radius: 1px;
+    background-color: aqua;
+    color: black;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 200px;
+    display: block;
+    margin-top: -15px;
+}
+.botIMG{
+    margin-left: 650px; 
+    margin-top: -400px;
+    display: block;
+    height: 400px;
+    width: 250px;
+}
+button:hover{
+    background-color: coral;
+}

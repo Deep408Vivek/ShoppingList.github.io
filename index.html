@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="shopPhoto">
+        <img src="https://ouch-cdn2.icons8.com/cFGa8IEIngI_KcgfvI4DXejNRyPVuo1PE_4xgwsagY4/rs:fit:368:465/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTg0/L2VmZjlmMTliLTk0/YWQtNGJkYS04NWZi/LTQ0YmNkMzNhYzU1/My5wbmc.png" alt="">
+        <img src="" alt="">
+    </div>
+    <div class="box" id="app">
+    <h1 style="display: block; margin-left: 45px; color: springgreen;">Shopping Mall</h1>
+        <form v-on:submit.prevent="addItem">
+            <h2>List the item you want to purchase from this shop!</h2>
+            <p>What do you need?
+                <input type="text" required placeholder="item name.." v-model="itemName">
+            </p>
+            <p>
+                How many : ?
+                <input type="number" placeholder="number of items.." v-model="itemNumber">
+            </p>
+            <button class="btn1" type="submit">Add item</button>
+        </form>
+        <img class="botIMG" src="https://ouch-cdn2.icons8.com/m-2cusKFJ0qvab7f3gegYMsuJNyY5QsgKXnv2RRJVVo/rs:fit:368:276/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTE0/LzlkNWUwNTYxLWMx/MDktNDQxMy05M2E2/LWJhOGJiNzlmNzIz/Yi5zdmc.png" alt="">
+        <div class="list" >
+            <p><strong>Shopping list:</strong></p>
+            <ul>
+                <li v-for="(item, index) in shoppingList" :key="index">
+                    {{ item.name }}, {{ item.number}}
+                    <button @click="removeList(index)" class="btn2" type="submit">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+    data(){
+        return {
+            itemName: null,
+            itemNumber: null,
+            shoppingList: [
+                {
+                    name: 'Item displays here', number: 0
+                }
+            ]
+        }
+    },
+    methods: {
+        addItem(){
+            let item = {
+                name: this.itemName,
+                number: this.itemNumber
+            }
+            this.shoppingList.push(item)
+            this.itemName = null
+            this.itemNumber = null
+        },
+        removeList(index){
+            this.shoppingList.splice(index, 1);
+        }
+    },
+})
+app.mount('#app')
+    </script>
+</body>
+</html>
