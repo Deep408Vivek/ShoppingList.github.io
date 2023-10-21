@@ -1,2 +1,3 @@
 # ShoppingList.github.io
-https://vivekdeep4.github.io/ShoppingList.guthub.io/
+
+https://deep408vivek.github.io/ShoppingList.github.io/
